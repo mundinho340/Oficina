@@ -11,7 +11,7 @@
             margin: auto;
             text-align: center;
             width: 300px;
-            background-color: aliceblue;
+            background-color: rgba(197, 2, 2, 0.253);
             height: 400px;
             border-radius: 10px; 
             margin-top: 30%;
@@ -19,12 +19,18 @@
             padding: 100px;
             transform: translate(-50%, -50%);
         }
+        h1{
+            color: white;
+            font-size: 30px;
+            font-family: 'Courier New', Courier, monospace;
+        }
         input{
             margin-top: 40px;
             padding: 20px;
             border-radius: 10px;
             width: 300px;
             font-size: 15px;
+            border: none;
         }
 
         button{
@@ -33,6 +39,14 @@
             padding: 20px;
             width: 350px;
             font-size: 15px;
+            color: white;
+            border: none;
+            background-color: rgba(0, 0, 255, 0.829);
+        }
+
+        button:hover{
+            background-color: rgba(55, 55, 255, 0.829);
+            cursor: pointer;
         }
 
 
@@ -53,8 +67,8 @@
         <section>
             <h1>Login</h1>
             <form action="">
-                <input type="text" placeholder="Nome"> <br>
-                <input type="text" placeholder="Senha"> <br>
+                <input type="text" placeholder="Nome" name="nome"> <br>
+                <input type="text" placeholder="Senha" name="senha"> <br>
                 <button>Entrar</button>
             </form>
         </section>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <section class="box">
+        <fieldset>
+            <legend><b>Formulario de Clientes</b></legend>
+            </article>
+            <article class="inputBox">
+                <label for="nome">Nome completo</label><br>
+                <input type="text" name="nome" placeholder="nome" id="nome" class="inputUser" required><br>
+            <article>
+                <label for="email">email</label><br>
+                <input type="email" name="email" placeholder="email" id="email" class="email" required><br>
+            </article>
+            <article class="inputBox">
+                <label for="telefone">Telefone</label><br>
+                <input type="text" name="telefone" id="telefone" class="telefone" required><br>
+            </article>
+            <article>
+                <p><label for="sexo">Sexo</label><br></p>
+                <label for="femenino">femenino</label>
+                <input type="radio" name="genero" id="sexo" value="femenino" required>
+                <br>
+                <label for="mascolino">mascolino</label>
+                <input type="radio" name="genero" id="masculino" class="masculino" value="masculino" required><br>
+                <label for="">Outros</label>
+                <input type="radio" name="genero" id="outros" class="outros" value="outros" required>
+            </article>
+            <article>
+                <label for="data_nascimento"><b>Data de Nascimento</b></label>
+                <input type="date" name="data_nascimento" id="data_nascimento"class="data_nascimento">
+            </article>
+            <article>
+                <label for="cidade">Cidade</label>
+                <input type="text" placeholder="cidade" id="cidade" class="cidade">
+            </article>
+            <article>
+                <label for="provincia">Provincia</label>
+                <input type="text" placeholder="Provincia" id="provincia" class="provincia">
+            </article>
+            <article>
+                <label for="endereco">Endereço</label>
+                <input type="text" id="endereco" name="endereco" >
+            </article>
+            <button id="submit">Enviar</button>
+        </fieldset>
+        
+        
+    </section>
+</body>
+</html>
