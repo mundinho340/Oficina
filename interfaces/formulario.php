@@ -16,14 +16,17 @@
       
     // }
 
+    include_once('../controller/config.php');
     $nome = $_POST["nome"];
     $email =$_POST["email"];
     $telefone =$_POST["telefone"];
     $sexo =$_POST["genero"];
-    $sexo =$_POST["cidade"];
+    $data_nasc = $_POST['data_nascimento'];
     $cidade= $_POST["cidade"];
     $estado =$_POST["estado"];
     $endereco=$_POST["endereco"];
+
+    $result = mysqli_query($conexao, "INSERT INTO utilizador(nome, email, telefone, sexo, data_nasc,cidade, estado, endereco) VALUES('$nome', '$email',' $telefone', '$sexo','$data_nasc','$cidade', '$estado', '$endereco')");
 
 ?>
 <!DOCTYPE html>
