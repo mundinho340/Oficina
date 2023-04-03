@@ -21,12 +21,13 @@
     $email =$_POST["email"];
     $telefone =$_POST["telefone"];
     $sexo =$_POST["genero"];
+    $password= $_POST["password"];
     $data_nasc = $_POST['data_nascimento'];
     $cidade= $_POST["cidade"];
     $estado =$_POST["estado"];
     $endereco=$_POST["endereco"];
 
-    $result = mysqli_query($conexao, "INSERT INTO utilizador(nome, email, telefone, sexo, data_nasc,cidade, estado, endereco) VALUES('$nome', '$email',' $telefone', '$sexo','$data_nasc','$cidade', '$estado', '$endereco')");
+    $result = mysqli_query($conexao, "INSERT INTO utilizadorr(nome,passwords,email, telefone, sexo, data_nasc,cidade, estado, endereco) VALUES('$nome','$password'. '$email',' $telefone', '$sexo','$data_nasc','$cidade', '$estado', '$endereco')");
 
 ?>
 <!DOCTYPE html>
@@ -126,7 +127,12 @@
                     <input type="text" name="email" id="email" class="inputUser" required>
                     <label for="email" class="labelInput">Email</label>
                 </div>
-                <br><br>
+                <br>
+                <div class="inputBox">
+                    <input type="pass" name="password" id="password" class="inputUser" required>
+                    <label for="password" class="labelInput">Password</label>
+                </div>
+                  <br>
                 <div class="inputBox">
                     <input type="tel" name="telefone" id="telefone" class="inputUser" required>
                     <label for="telefone" class="labelInput">Telefone</label>
