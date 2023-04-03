@@ -1,3 +1,22 @@
+<?php
+    if(isset($_POST['submit'])){
+        print_r('nome: '.$_POST["nome"]);
+        print_r('<br>');
+        print_r('email '.$_POST["email"]);
+        print_r('<br>');
+        print_r('telefone '.$_POST["telefone"]);
+        print_r('<br>');
+        print_r('sexo: '.$_POST["genero"]);
+        print_r('<br>');
+        print_r('cidade '.$_POST["cidade"]);
+        print_r('<br>');
+        print_r('estado '.$_POST["estado"]);
+         print_r('<br>');
+        print_r('endereço '.$_POST["endereco"]);
+      
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -82,7 +101,7 @@
 </head>
 <body>
     <div class="box">
-        <form action="">
+        <form action="formulario.php" method="post">
             <fieldset>
                 <legend><b>Fórmulário de Clientes</b></legend>
                 <br>
