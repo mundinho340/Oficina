@@ -1,24 +1,33 @@
 <?php
-    if(isset($_POST['submit'])){
-        print_r('nome: '.$_POST["nome"]);
-        print_r('<br>');
-        print_r('email '.$_POST["email"]);
-        print_r('<br>');
-        print_r('telefone '.$_POST["telefone"]);
-        print_r('<br>');
-        print_r('sexo: '.$_POST["genero"]);
-        print_r('<br>');
-        print_r('cidade '.$_POST["cidade"]);
-        print_r('<br>');
-        print_r('estado '.$_POST["estado"]);
-         print_r('<br>');
-        print_r('endereço '.$_POST["endereco"]);
+    // if(isset($_POST['submit'])){
+    //     print_r('nome: '.$_POST["nome"]);
+    //     print_r('<br>');
+    //     print_r('email '.$_POST["email"]);
+    //     print_r('<br>');
+    //     print_r('telefone '.$_POST["telefone"]);
+    //     print_r('<br>');
+    //     print_r('sexo: '.$_POST["genero"]);
+    //     print_r('<br>');
+    //     print_r('cidade '.$_POST["cidade"]);
+    //     print_r('<br>');
+    //     print_r('estado '.$_POST["estado"]);
+    //      print_r('<br>');
+    //     print_r('endereço '.$_POST["endereco"]);
       
-    }
+    // }
+
+    $nome = $_POST["nome"];
+    $email =$_POST["email"];
+    $telefone =$_POST["telefone"];
+    $sexo =$_POST["genero"];
+    $sexo =$_POST["cidade"];
+    $cidade= $_POST["cidade"];
+    $estado =$_POST["estado"];
+    $endereco=$_POST["endereco"];
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
