@@ -26,8 +26,8 @@
     $cidade= $_POST["cidade"];
     $estado =$_POST["estado"];
     $endereco=$_POST["endereco"];
-
-    $result = mysqli_query($conexao, "INSERT INTO utilizadorr(nome,email, telefone, sexo, data_nasc,cidade, estado, endereco,senha) VALUES('$nome', '$email',' $telefone', '$sexo','$data_nasc','$cidade', '$estado', '$endereco', '$senha')");
+    echo "nome -> $nome email -> $email senha -> $senha telefone -> $telefone sexo -> $sexo data -> $data_nsc cidade -> $cidade estado -> $estado endereco -> $endereco";
+    $result = mysqli_query($conexao, "INSERT INTO utilizadorr(nome, email, telefone, sexo, data_nasc,cidade, estado, endereco, senha) VALUES('$nome', '$email',' $telefone', '$sexo','$data_nasc','$cidade', '$estado', '$endereco', '$senha')");
 
 ?>
 <!DOCTYPE html>
@@ -129,8 +129,8 @@
                 </div>
                 <br>
                 <div class="inputBox">
-                    <input type="pass" name="senha" id="password" class="inputUser" required>
-                    <label for="senha" class="labelInput">Password</label>
+                    <input type="password" name="senha" id="password" class="inputUser" required>
+                    <label for="senha" class="labelInput">senha</label>
                 </div>
                   <br>
                 <div class="inputBox">
