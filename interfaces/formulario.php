@@ -26,8 +26,8 @@
     $cidade= $_POST["cidade"];
     $estado =$_POST["estado"];
     $endereco=$_POST["endereco"];
-    echo "nome -> $nome email -> $email senha -> $senha telefone -> $telefone sexo -> $sexo data -> $data_nsc cidade -> $cidade estado -> $estado endereco -> $endereco";
-    $result = mysqli_query($conexao, "INSERT INTO utilizadorr(nome, telefone, email, sexo, data_nasc,cidade, estado, senha) VALUES('$nome', '$telefone',' $email', '$sexo','$data_nasc','$cidade', '$estado', '$senha')");
+    echo "nome -> $nome email -> $email senha -> $senha telefone -> $telefone sexo -> $sexo data -> $data_nasc cidade -> $cidade estado -> $estado endereco -> $endereco";
+    $result = mysqli_query($conexao, "insert into utilizadorr(nome, telefone, email, sexo, date_nasc,cidade, estado, senha) values('$nome', '$telefone', '$email', '$sexo','$data_nasc','$cidade', '$estado', '$senha')");
 
 ?>
 <!DOCTYPE html>
