@@ -43,17 +43,11 @@
     </style>
 </head>
 <body>
-    <?php
-        $email = $_POST['email'];
-        $senha = $_POST['senha'];
-       
-        echo "senha -> ". md5($senha)." email -> $email";
-
-?>
+   
     <a href="home.php">Voltar</a>
     <div>
         <h1>Login</h1>
-        <form action="login.php" method="POST">
+        <form action="testLogin.php" method="POST">
             <input type="text" name="email" placeholder="Email">
             <br><br>
             <input type="password" name="senha" placeholder="Senha">
