@@ -28,7 +28,7 @@
     $endereco=$_POST["endereco"];
     echo "nome -> $nome email -> $email senha -> $senha telefone -> $telefone sexo -> $sexo data -> $data_nasc cidade -> $cidade estado -> $estado endereco -> $endereco";
     $result = mysqli_query($conexao, "insert into utilizadorr(nome, telefone, email, sexo, date_nasc,cidade, estado, senha) values('$nome', '$telefone', '$email', '$sexo','$data_nasc','$cidade', '$estado', '$senha')");
-
+     header('Location: login.php');
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
