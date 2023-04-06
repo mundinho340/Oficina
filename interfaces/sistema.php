@@ -71,7 +71,23 @@
             </tr>
         </thead>
         <tbody>
-           
+           <?php
+                while($user_data = mysqli_fetch_assoc($result)){
+                    echo "<tr>";
+                    echo "<td>".$user_data['id']."</td>";
+                    echo "<td>".$user_data['nome']."</td>";
+                    echo "<td>".$user_data['telefone']."</td>";
+                    echo "<td>".$user_data['email']."</td>";
+                    echo "<td>".$user_data['sexo']."</td>";
+                    echo "<td>".$user_data['date_nasc']."</td>";
+                    echo "<td>".$user_data['cidade']."</td>";
+                    echo "<td>".$user_data['estado']."</td>";
+                    echo "<td>".$user_data['senha']."</td>";
+
+
+                }
+
+           ?>
         </tbody>
     </table>
     </body>
