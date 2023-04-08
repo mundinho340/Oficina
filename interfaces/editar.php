@@ -24,20 +24,21 @@
         
         if($result -> num_rows> 0){
             while($user_data = mysqli_fetch_assoc($result)){
-                $nome = $_POST["nome"];
-                $email =$_POST["email"];
-                $telefone =$_POST["telefone"];
-                $sexo =$_POST["genero"];
-                $senha= $_POST["senha"];
-                $data_nasc = $_POST['data_nascimento'];
-                $cidade= $_POST["cidade"];
-                $estado =$_POST["estado"];
-                $endereco=$_POST["endereco"];
+                $nome = $user_data["nome"];
+                $email =$user_data["email"];
+                $telefone =$user_data["telefone"];
+                $sexo =$user_data["genero"];
+                $senha= $user_data["senha"];
+                $data_nasc = $user_data['data_nascimento'];
+                $cidade= $user_data["cidade"];
+                $estado =$user_data["estado"];
+                $endereco=$user_data["endereco"];
                 echo "nome -> $nome email -> $email senha -> $senha telefone -> $telefone sexo -> $sexo data -> $data_nasc cidade -> $cidade estado -> $estado endereco -> $endereco";
+            }
+            print_r("nome : $nome");
+
             }else{
                 header('location: sistema.php');
-            }
-
             }
         // $result = mysqli_query($conexao, "insert into utilizadorr(nome, telefone, email, sexo, date_nasc,cidade, estado, senha) values('$nome', '$telefone', '$email', '$sexo','$data_nasc','$cidade', '$estado', '$senha')");
     }
