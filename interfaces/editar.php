@@ -15,22 +15,26 @@
     //     print_r('endereço '.$_POST["endereco"]);
       
     // }
-
-    include_once('../controller/config.php');
-    $nome = $_POST["nome"];
-    $email =$_POST["email"];
-    $telefone =$_POST["telefone"];
-    $sexo =$_POST["genero"];
-    $senha= $_POST["senha"];
-    $data_nasc = $_POST['data_nascimento'];
-    $cidade= $_POST["cidade"];
-    $estado =$_POST["estado"];
-    $endereco=$_POST["endereco"];
-    echo "nome -> $nome email -> $email senha -> $senha telefone -> $telefone sexo -> $sexo data -> $data_nasc cidade -> $cidade estado -> $estado endereco -> $endereco";
-    if(isset($_POST['submit']) && !empty($_POST['nome']) &&  !empty($_POST['email']) && !empty($_POST['telefone']) && !empty($_POST['sexo']) && !empty($$_POST['senha']) && !empty($_POST['data_nasc']) && !empty($_POST['cidade']) && !empty($_POST['estado']) && !empty($_POST['endereco'])){
-        $result = mysqli_query($conexao, "insert into utilizadorr(nome, telefone, email, sexo, date_nasc,cidade, estado, senha) values('$nome', '$telefone', '$email', '$sexo','$data_nasc','$cidade', '$estado', '$senha')");
+    
+    if(!empty($_GET['id'])){
+        include_once('../controller/config.php');
+        $id = $_POST['id'];
+        $selectSQL= 'SELECT * FROM utilizadorr id=$id';
+        $result = $conexao -> query($selectSQL);
         
-        header('Location: login.php');
+        if($result -> num_rows> 0){
+            $nome = $_POST["nome"];
+            $email =$_POST["email"];
+            $telefone =$_POST["telefone"];
+            $sexo =$_POST["genero"];
+            $senha= $_POST["senha"];
+            $data_nasc = $_POST['data_nascimento'];
+            $cidade= $_POST["cidade"];
+            $estado =$_POST["estado"];
+            $endereco=$_POST["endereco"];
+            echo "nome -> $nome email -> $email senha -> $senha telefone -> $telefone sexo -> $sexo data -> $data_nasc cidade -> $cidade estado -> $estado endereco -> $endereco";
+        }
+        // $result = mysqli_query($conexao, "insert into utilizadorr(nome, telefone, email, sexo, date_nasc,cidade, estado, senha) values('$nome', '$telefone', '$email', '$sexo','$data_nasc','$cidade', '$estado', '$senha')");
     }
 ?>
 <!DOCTYPE html>
