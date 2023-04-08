@@ -23,17 +23,22 @@
         $result = $conexao -> query($selectSQL);
         
         if($result -> num_rows> 0){
-            $nome = $_POST["nome"];
-            $email =$_POST["email"];
-            $telefone =$_POST["telefone"];
-            $sexo =$_POST["genero"];
-            $senha= $_POST["senha"];
-            $data_nasc = $_POST['data_nascimento'];
-            $cidade= $_POST["cidade"];
-            $estado =$_POST["estado"];
-            $endereco=$_POST["endereco"];
-            echo "nome -> $nome email -> $email senha -> $senha telefone -> $telefone sexo -> $sexo data -> $data_nasc cidade -> $cidade estado -> $estado endereco -> $endereco";
-        }
+            while($user_data = mysqli_fetch_assoc($result)){
+                $nome = $_POST["nome"];
+                $email =$_POST["email"];
+                $telefone =$_POST["telefone"];
+                $sexo =$_POST["genero"];
+                $senha= $_POST["senha"];
+                $data_nasc = $_POST['data_nascimento'];
+                $cidade= $_POST["cidade"];
+                $estado =$_POST["estado"];
+                $endereco=$_POST["endereco"];
+                echo "nome -> $nome email -> $email senha -> $senha telefone -> $telefone sexo -> $sexo data -> $data_nasc cidade -> $cidade estado -> $estado endereco -> $endereco";
+            }else{
+                header('location: sistema.php');
+            }
+
+            }
         // $result = mysqli_query($conexao, "insert into utilizadorr(nome, telefone, email, sexo, date_nasc,cidade, estado, senha) values('$nome', '$telefone', '$email', '$sexo','$data_nasc','$cidade', '$estado', '$senha')");
     }
 ?>
