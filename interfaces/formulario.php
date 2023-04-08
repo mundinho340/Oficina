@@ -16,20 +16,19 @@
       
     // }
 
-    include_once('../controller/config.php');
-    $nome = $_POST["nome"];
-    $email =$_POST["email"];
-    $telefone =$_POST["telefone"];
-    $sexo =$_POST["genero"];
-    $senha= $_POST["senha"];
-    $data_nasc = $_POST['data_nascimento'];
-    $cidade= $_POST["cidade"];
-    $estado =$_POST["estado"];
-    $endereco=$_POST["endereco"];
-    echo "nome -> $nome email -> $email senha -> $senha telefone -> $telefone sexo -> $sexo data -> $data_nasc cidade -> $cidade estado -> $estado endereco -> $endereco";
-    $result = mysqli_query($conexao, "insert into utilizadorr(nome, telefone, email, sexo, date_nasc,cidade, estado, senha) values('$nome', '$telefone', '$email', '$sexo','$data_nasc','$cidade', '$estado', '$senha')");
     if(isset($_POST['submit'])){
-
+        include_once('../controller/config.php');
+        $nome = $_POST["nome"];
+        $email =$_POST["email"];
+        $telefone =$_POST["telefone"];
+        $sexo =$_POST["genero"];
+        $senha= $_POST["senha"];
+        $data_nasc = $_POST['data_nascimento'];
+        $cidade= $_POST["cidade"];
+        $estado =$_POST["estado"];
+        $endereco=$_POST["endereco"];
+        echo "nome -> $nome email -> $email senha -> $senha telefone -> $telefone sexo -> $sexo data -> $data_nasc cidade -> $cidade estado -> $estado endereco -> $endereco";
+       $result = mysqli_query($conexao, "insert into utilizadorr(nome, telefone, email, sexo, date_nasc,cidade, estado, senha) values('$nome', '$telefone', '$email', '$sexo','$data_nasc','$cidade', '$estado', '$senha')");
         header('Location: login.php');
     }
 ?>
