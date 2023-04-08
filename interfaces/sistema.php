@@ -39,6 +39,10 @@
             justify-content: center;
             gap: .1%;
         }
+        .table-bg{
+            background: rgba(0,0,0,0.3);
+            border-radius: 15px 15px 0 0;
+        }
     </style>
 </head>
 <body>
@@ -54,41 +58,40 @@
         </div>
     </nav>
 
-    <table class="table">
-        <thead>
-            <tr>
-            <th scope="col">id</th>
-            <th scope="col">nomeFirst</th>
-            <th scope="col">telefone</th>
-            <th scope="col">email</th>
-            <th scope="col">sexo</th>
-            <th scope="col">data_nasc</th>
-            <th scope="col">cidade</th>
-            <th scope="col">estado</th>
-            <th scope="col">senha</th>
-            <th scope="col">...</th>
-
-            </tr>
-        </thead>
-        <tbody>
-           <?php
-                while($user_data = mysqli_fetch_assoc($result)){
-                    echo "<tr>";
-                    echo "<td>".$user_data['id']."</td>";
-                    echo "<td>".$user_data['nome']."</td>";
-                    echo "<td>".$user_data['telefone']."</td>";
-                    echo "<td>".$user_data['email']."</td>";
-                    echo "<td>".$user_data['sexo']."</td>";
-                    echo "<td>".$user_data['date_nasc']."</td>";
-                    echo "<td>".$user_data['cidade']."</td>";
-                    echo "<td>".$user_data['estado']."</td>";
-                    echo "<td>".$user_data['senha']."</td>";
-
-
-                }
-
-           ?>
-        </tbody>
-    </table>
+    <div class="m-50">
+        <table class="table text-white table-bg">
+            <thead>
+                <tr>
+                <th scope="col">id</th>
+                <th scope="col">nomeFirst</th>
+                <th scope="col">telefone</th>
+                <th scope="col">email</th>
+                <th scope="col">sexo</th>
+                <th scope="col">data_nasc</th>
+                <th scope="col">cidade</th>
+                <th scope="col">estado</th>
+                <th scope="col">senha</th>
+                <th scope="col">...</th>
+                </tr>
+            </thead>
+            <tbody>
+               <?php
+                    while($user_data = mysqli_fetch_assoc($result)){
+                        echo "<tr>";
+                        echo "<td>".$user_data['id']."</td>";
+                        echo "<td>".$user_data['nome']."</td>";
+                        echo "<td>".$user_data['telefone']."</td>";
+                        echo "<td>".$user_data['email']."</td>";
+                        echo "<td>".$user_data['sexo']."</td>";
+                        echo "<td>".$user_data['date_nasc']."</td>";
+                        echo "<td>".$user_data['cidade']."</td>";
+                        echo "<td>".$user_data['estado']."</td>";
+                        echo "<td>".$user_data['senha']."</td>";
+                        echo "<td>acoes</td>";
+                    }
+               ?>
+            </tbody>
+        </table>
+    </div>
     </body>
 </html>
