@@ -113,7 +113,7 @@
         <p>Voltar</p>
     </a>
     <div class="box">
-        <form action="formulario.php" method="post">
+        <form action="saveEdit.php" method="post">
             <fieldset>
                 <legend><b>Fórmulário de Clientes</b></legend>
                 <br>
@@ -128,7 +128,7 @@
                 </div>
                 <br>
                 <div class="inputBox">
-                    <input type="password" name="senha" id="password" class="inputUser" value=<?php echo $senha?> required>
+                    <input type="text" name="senha" id="password" class="inputUser" value=<?php echo $senha?> required>
                     <label for="senha" class="labelInput">senha</label>
                 </div>
                   <br>
