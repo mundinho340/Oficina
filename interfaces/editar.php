@@ -24,6 +24,8 @@
             }else{
                 header('location: sistema.php');
             }
+    }else {
+        header('location: sistema.php');
     }
 ?>
 <!DOCTYPE html>
@@ -164,8 +166,8 @@
                     <label for="endereco" class="labelInput">Endereço</label>
                 </div>
                 <br><br>
-                <input type="hidden" name="id" value=<?php echo $id; ?> >
-                <input type="submit" name="update" id="update">
+                <input type="hidden" name="id" value="<?php echo $id; ?>" >
+                <input type="submit" name="update" id="update"> 
             </fieldset>
         </form>
     </div>
